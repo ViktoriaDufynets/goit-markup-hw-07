@@ -15,32 +15,41 @@ body {
 /* H E A D E R */
 
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 70px;
-    left: 0px;
-    top: 0px;
+    padding-left: 16px;
+    padding-right: 16px;
 
     background: #FFFFFF;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 @media screen and (min-width: 768px) {
     .header {
-    height: 72px;
     border-bottom: 1px solid #E7E9FC;
     }
 }
 @media screen and (min-width: 1200px) {
     .header {
         height: 72px;
-        border-bottom: 1px solid #E7E9FC;
     }
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        }
+    .notdisplay {
+        gap: 118px;
+    }
+    }
 .logo {
     display: flex;
     align-items: center;
     padding-top: 6px;
     padding-bottom: 6px;
     text-decoration: none;
-    margin-right: 77px;
     height: 24px;
     font-family: 'Raleway';
     font-style: normal;
@@ -194,6 +203,8 @@ span {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 55px;
+    padding-right: 55px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -206,6 +217,8 @@ span {
     .page-title {
         font-size: 56px;
         line-height: 1.07;
+        padding-left: 137px;
+        padding-right: 137px;
     }
 }
 
@@ -278,6 +291,7 @@ span {
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
+    overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -507,6 +521,9 @@ textarea::placeholder {
     background: #404BBF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
+.work {
+    color: #4D5AE5;
+}
 
 
 /* COMPANY STRATEGIES */
@@ -514,8 +531,8 @@ textarea::placeholder {
 .columns {
     text-align: left;
     padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 16px;
+    padding-right: 16px;
     padding-bottom: 96px;
     list-style: none;
     margin-top: 0;
@@ -528,19 +545,17 @@ textarea::placeholder {
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 8px;
-    font-size: 20px;
+    font-size: 36px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2E2F42;
 }
 
 .columns p {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    padding-left: 16px;
+    margin: 0;
+    padding: 0;
     text-decoration: none;
     font-size: 16px;
     line-height: 1.5;
@@ -550,6 +565,15 @@ textarea::placeholder {
 .strategy {
     padding-top: 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .item-antenna, .item-clock, .item-diagram, .item-austronaut {
+            flex-basis: calc((100% - 16px) / 2);
+        }
+    }
 
 
 /* WHAT WE ARE DOING */
@@ -566,12 +590,17 @@ textarea::placeholder {
     align-items: center;
   }
 }
+@media screen and (max-width: 1200px) {
+    .notdisplay1 {
+        display: none;
+        }
+    }
 
 
 /* COMPANY TEAM */
 
 .section-team {
-    padding-bottom: 120px;
+    padding-bottom: 56px;
     background-color: #F4F4FD;
 }
 .team-header {
@@ -612,6 +641,15 @@ textarea::placeholder {
 :team:last-child {
     margin-bottom: 0px;
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .team-members {
+        display: flex;
+        flex-wrap: wrap;
+        }
+    .team {
+        flex-basis: calc((100% - 108px) / 2);
+    }
+    }
 
 .team-title {
     text-align: center;
@@ -644,6 +682,7 @@ textarea::placeholder {
 .mur {
     display: flex;
     gap: 24px;
+    margin-bottom: 36px;
 }
 
 .social-icon {
@@ -653,7 +692,6 @@ textarea::placeholder {
     border-radius: 50%;
     border: 0;
     cursor: pointer;
-    margin-bottom: 36px;
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -668,13 +706,15 @@ textarea::placeholder {
 
 /* C U S T O M E R S */
 
+
 .customers {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
     margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
+    margin-bottom: 96px;
+    padding-left: 16px;
+    padding-right: 16px;
     list-style: none;
 }
 
@@ -684,7 +724,9 @@ textarea::placeholder {
 }
 
 .customer {
-    width: 168px;
+    flex-basis: calc((100% - 16px) / 2);
+    margin-bottom: 72px;
+    min-width: 168px;
     height: 88px;
     background-color: white;
     color: var(--primary);
@@ -696,6 +738,15 @@ textarea::placeholder {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .customers {
+        display: flex;
+        flex-wrap: wrap;
+        }
+    .customer {
+        flex-basis: calc((100% - 16px) / 3);
+    }
+    }
 
 .customer:hover {
     color: var(--accent);
@@ -894,11 +945,13 @@ textarea::placeholder {
     position: fixed;
     top: 0;
     left: 0;
+    padding: 80px 40px 40px;
     width: 100vw;
     height: 100vh;
     background: #FFFFFF;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     z-index: 999;
+    overflow-y: scroll;
 
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
@@ -938,8 +991,6 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-left: 40px;
-    margin-top: 80px;
     margin-bottom: 284px;
     padding: 0;
 }
@@ -948,7 +999,6 @@ textarea::placeholder {
     display: flex;
     flex-direction: column-reverse;
     gap: 40px;
-    margin-left: 40px;
     margin-bottom: 48px;
     padding: 0;
 }
@@ -992,5 +1042,5 @@ textarea::placeholder {
 .foot-icons {
     display: flex;
     gap: 64px;
-    justify-content: center;
+    justify-content: space-between;
 }
