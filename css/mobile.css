@@ -657,6 +657,7 @@ textarea::placeholder {
 }
 
 .team-name-job {
+    width: 100%;
     padding-top: 32px;
     padding-bottom: 12px;
 }
