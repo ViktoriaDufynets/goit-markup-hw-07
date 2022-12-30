@@ -607,7 +607,6 @@ textarea::placeholder {
     justify-content: center;
     align-items: center;
     margin-bottom: 72px;
-    height: 428px;
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
@@ -620,11 +619,18 @@ textarea::placeholder {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 24px;
-        width: 100%;
+        row-gap: 72px;
+        column-gap: 24px;
         justify-content: center;
         align-items: center;
         }
+    }
+    .team {
+        flex-basis: calc((100% - 48px) / 2);
+    }
+    .team-image {
+        width: 100%;
+        height: auto;
     }
 
 .team-title {
@@ -1201,11 +1207,12 @@ textarea::placeholder {
 }
 .team-members {
     flex-direction: row;
-    gap: 10px;
+    gap: 24px;
     padding: 0;
     justify-content: space-between;
 }
 .team {
+    flex-basis: none;
     margin-bottom: 0;
 }
 .customers {
