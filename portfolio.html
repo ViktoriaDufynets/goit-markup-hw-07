@@ -23,13 +23,23 @@
   <body>
     <!-- Page Header -->
     <header class="header">
-      <div class="page-header">
-        <a class="logo" href="/"><span>WEB</span>STUDIO</a>
+      <a class="logo" href="/"><span>WEB</span>STUDIO</a>
+      <button
+        type="button"
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="30px" height="18.6px" aria-label="switch mobile menu">
+          <use class="icon-menu" href="./images/icons.svg#burger"></use>
+        </svg>
+      </button>
+      <div class="notdisplay">
         <nav>
           <!-- Navigation to other pages -->
           <ul class="top-links">
             <li class="topchyk">
-              <a class="header-links" href="index.html">Studio</a>
+              <a class="header-links" href="/index.html">Studio</a>
             </li>
             <li class="topchyk">
               <a class="header-links current" href="portfolio.html"
@@ -290,6 +300,63 @@
         </div>
       </section>
     </main>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="vector">
+          <use href="./images/icons.svg#vector"></use>
+        </svg>
+      </button>
+
+      <nav>
+        <!-- Navigation to other pages -->
+        <ul class="top-links1">
+          <li class="topchyk11">
+            <a class="header-links1 current" href="/index.html">Studio</a>
+          </li>
+          <li class="topchyk11">
+            <a class="header-links1" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="topchyk11">
+            <a class="header-links1" href="/contact">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Contacts list -->
+      <ul class="contacts1">
+        <li class="topchyk1">
+          <a class="contact1" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+        <li class="topchyk1">
+          <a class="contact-tel" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+      </ul>
+      <div class="foot-icons">
+        <button class="social-icon">
+          <svg class="icon-type">
+            <use href="./images/icons.svg#icon-instagram"></use>
+          </svg>
+        </button>
+        <button class="social-icon">
+          <svg class="icon-type">
+            <use href="./images/icons.svg#icon-twitter"></use>
+          </svg>
+        </button>
+        <button class="social-icon">
+          <svg class="icon-type">
+            <use href="./images/icons.svg#icon-facebook"></use>
+          </svg>
+        </button>
+        <button class="social-icon">
+          <svg class="icon-type">
+            <use href="./images/icons.svg#icon-linkedin2"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
         <!-- Company address -->
@@ -356,5 +423,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
