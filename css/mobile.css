@@ -12,6 +12,30 @@ body {
     font-family: 'Roboto';
     color: #ffffff;
 }
+.container {
+    width: 100%;
+    margin: auto;
+    /*outline: 2px solid rgb(58, 56, 56);*/
+}
+.container1 {
+    width: 100%;
+    margin: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    /*outline: 2px solid rgb(58, 56, 56);*/
+}
+.section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+}
+
+.section-team {
+        padding-top: 96px;
+        padding-bottom: 128px;
+        background-color: #F4F4FD;
+}
+
+
 /* H E A D E R */
 
 .header {
@@ -29,6 +53,18 @@ body {
     .header {
     border-bottom: 1px solid #E7E9FC;
     }
+.current::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #4D5AE5;
+    border-radius: 2px;
+    opacity: 1;
+}
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     .contacts {
@@ -70,16 +106,13 @@ span {
 }
 
 .page-header {
-    position: relative;
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-left: auto;
         margin-right: auto;
-        width: 100%;
         height: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
         width: 1178px;
 }
 
@@ -145,7 +178,7 @@ span {
         display: block;
         padding-top: 22px;
         padding-bottom: 22px;
-        width: 78px;
+        width: 100%;
         text-decoration: none;
         font-weight: 600;
         font-size: 16px;
@@ -163,11 +196,13 @@ span {
 
 
 /*  M A I N  P I C T U R E */
+.hero-text {
+    margin: 0;
+}
 .box-title {
     height: 432px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 24px;
     padding-top: 112px;
     text-align: center;
     background-image: linear-gradient(to right,
@@ -182,6 +217,11 @@ span {
     .box-title {
         height: 436px;
     }
+    .container {
+            padding-left: 108px;
+            padding-right: 108px;
+            /*outline: 2px solid rgb(58, 56, 56);*/
+    }
 }
 
 .page-title {
@@ -190,8 +230,6 @@ span {
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 55px;
-    padding-right: 55px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -505,19 +543,16 @@ textarea::placeholder {
 /* COMPANY STRATEGIES */
 
 .columns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 72px;
     text-align: left;
-    padding-top: 0;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 96px;
+    padding: 0;
+    margin: 0;
     list-style: none;
-    margin-top: 0;
-    margin-bottom: 0;
 }
-
-.columns h3 {
+.strategy {
     text-align: center;
-    padding-top: 72px;
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 8px;
@@ -529,28 +564,26 @@ textarea::placeholder {
     color: #2E2F42;
 }
 
+
 .columns p {
     margin: 0;
-    padding: 0;
     text-decoration: none;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
 }
-.strategy {
-    padding-top: 0;
-}
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     .columns {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
-        gap: 24px;
         }
-        .item-antenna, .item-clock, .item-diagram, .item-austronaut {
+    .item-antenna, .item-clock, .item-diagram, .item-austronaut {
             flex-basis: calc((100% - 32px) / 2);
-        }
-    .columns h3 {
+    }
+    .strategy {
         text-align: left;
     }
     }
@@ -573,14 +606,9 @@ textarea::placeholder {
 
 /* COMPANY TEAM */
 
-.section-team {
-    padding-bottom: 56px;
-    background-color: #F4F4FD;
-}
 .team-header {
     margin-top: 0;
     margin-bottom: 72px;
-    padding-top: 96px;
     text-align: center;
     font-style: normal;
     font-weight: 600;
@@ -594,34 +622,30 @@ textarea::placeholder {
 .team-members {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    row-gap: 72px;
     align-items: center;
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
 }
-
 .team {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 72px;
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
 }
-:team:last-child {
-    margin-bottom: 0px;
-}
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+
     .team-members {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        row-gap: 72px;
+        row-gap: 64px;
         column-gap: 24px;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         }
     }
@@ -693,12 +717,12 @@ textarea::placeholder {
 .customers {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    row-gap: 72px;
+    column-gap: 16px;
     width: 100%;
-    margin-top: 0;
-    margin-bottom: 96px;
     padding-left: 16px;
     padding-right: 16px;
+    margin: 0;
     list-style: none;
 }
 
@@ -724,6 +748,9 @@ textarea::placeholder {
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     .customer {
         flex-basis: calc((100% - 32px) / 3);
+    }
+    .customers {
+        column-gap: 16px;
     }
     }
 
@@ -759,8 +786,6 @@ textarea::placeholder {
 .address {
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .footer-scope {
@@ -902,7 +927,6 @@ textarea::placeholder {
         flex-wrap: wrap;
         flex-direction: row;
         align-items: flex-start;
-        padding-left: 93px;
         }
         .scope1 {
             margin-bottom: 100px;
@@ -928,7 +952,7 @@ textarea::placeholder {
 
 .menu-toggle {
     position: absolute;
-    right: 15px;
+    right: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -942,6 +966,9 @@ textarea::placeholder {
 }
 
 @media (min-width: 768px) {
+    .customers {
+        padding: 0;
+    }
     .menu-toggle {
         display: none;
     }
@@ -1058,28 +1085,42 @@ textarea::placeholder {
 
 
 @media screen and (min-width: 1200px) {
-    .section {
+    .container1 {
+            width: 1158px;
+        }
+    .container {
+        width: 1158px;
+    }
+.section {
         padding-top: 120px;
         padding-bottom: 120px;
-}
-.section1 {
+    }
+
+    .section1 {
         padding-bottom: 120px;
 
-}
-.section-team {
+    }
+
+    .section-team {
         padding-top: 120px;
         padding-bottom: 120px;
         background-color: #F4F4FD;
-}
+    }
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 
-.container {
-        margin-left: auto;
-        margin-right: auto;
-        width: 1158px;
-        padding-left: 15px;
-        padding-right: 15px;
-        /*outline: 2px solid rgb(58, 56, 56);*/
-}
+    .section1 {
+        padding-bottom: 120px;
+
+    }
+
+    .section-team {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        background-color: #F4F4FD;
+    }
     .header {
         height: 72px;
         align-items: center;
@@ -1098,17 +1139,16 @@ textarea::placeholder {
     }
     .page-title {
         padding-top: 192px;
-        padding-left: 474px;
-        padding-right: 474px;
     }
     .button-first {
         margin-top: 48px;
     }
     .columns {
         display: flex;
+        flex-direction: row;
         padding: 0;
 }
-.columns h3 {
+   .strategy {
     text-align: left;
         font-weight: 500;
         padding-top: 8px;
@@ -1117,10 +1157,7 @@ textarea::placeholder {
 }
 
 .columns p {
-        margin-top: 0;
-        margin-left: 0;
-        margin-bottom: 0;
-        margin-right: 0;
+        margin: 0;
         text-decoration: none;
         font-size: 16px;
         line-height: 1.5;
@@ -1182,19 +1219,6 @@ textarea::placeholder {
         background-image: url(../images/astronaut\ 1.svg);
         background-position: center;
         background-repeat: no-repeat;
-}
-
-.current::after {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 4px;
-        background: #4D5AE5;
-        border-radius: 2px;
-        opacity: 1;
 }
 .team-header {
     padding-top: 0;
